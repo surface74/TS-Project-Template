@@ -4,6 +4,13 @@ module.exports = {
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase: path.resolve(__dirname, './dist'),
-    },
+        open: {
+            app: {
+                name: 'chrome',
+            }
+        },
+        hot: true,
+        compress: true,
+        port: 3000,
+    }
 };
