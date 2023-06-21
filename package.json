@@ -1,7 +1,7 @@
 {
     "name": "ts-template-project",
     "version": "1.0.0",
-    "description": "",
+    "description": "The base for a TS-projects",
     "private": "true",
     "scripts": {
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
