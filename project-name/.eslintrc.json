@@ -21,10 +21,9 @@
         "node": true
     },
     "rules": {
-        // "@typescript-eslint/no-explicit-any": "error",
-        // "@typescript-eslint/indent": "warn",
-        "no-debugger": "off",
-        "no-console": 0,
+        "no-debugger": "warn",
+        "no-console": 1,
         "class-methods-use-this": "warn"
-    }
+    },
+    "ignorePatterns": ["webpack*.config.js"]
 }
