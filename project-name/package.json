@@ -7,7 +7,8 @@
         "start": "webpack serve --open --config ./webpack.config.js --env mode=dev",
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts",
-        "test": "jest"
+        "test": "jest",
+        "format": "prettier --check src"
     },
     "repository": {
         "type": "git",
