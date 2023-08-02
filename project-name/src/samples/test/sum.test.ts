@@ -1,4 +1,3 @@
-// const sum = require('./index');
 import sum from './sum';
 
 describe('sum', () => {

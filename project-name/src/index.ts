@@ -1,6 +1,5 @@
-import './index.scss';
+import SampleStiles from './samples/styles/sample-styles';
 
-const title: HTMLElement = document.createElement('h1');
-title.textContent = 'Hello world!';
+const sample = new SampleStiles();
 
-document.body.append(title);
+document.body.append(sample.getElement());

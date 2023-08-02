@@ -20,11 +20,29 @@ const baseConfig = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader,
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              localIdentName: '[local]--[hash:base64:5]',
+            },
+          },
+        },
+        ],
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader,
+        {
+          loader: "css-loader",
+          options: {
+            modules: {
+              localIdentName: '[local]--[hash:base64:5]',
+            },
+          },
+        },
+          'sass-loader'],
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
@@ -36,7 +54,7 @@ const baseConfig = {
     extensions: ['.ts', '.tsx', '.js'],
   },
   output: {
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[hash][ext]',
   },
